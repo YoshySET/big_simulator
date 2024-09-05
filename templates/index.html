@@ -1,30 +1,30 @@
-{% extends "base.html" %}
+{% extends "common/base.html" %}
 {% block content %}
     <div class="container-fluid">
 
         <!-- Page Heading -->
         <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h4 mb-0 text-gray-800">リアルタイムデータ</h1>
-            <span>※2024/07/07 12:12:12更新</span>
+            <h1 class="h4 mb-0 text-gray-800">第{{ "1476" }}回 BIG情報</h1>
+            <span class="small">※{{ "2024/07/07 12:12:12" }}更新</span>
         </div>
 
-        <!-- 投票口数カード -->
         <div class="row">
-            <!-- Content Column -->
+            <!-- 投票口数カード -->
             <div class="col-lg-6 mb-4">
                 <!-- Project Card Example -->
-                <div class="card shadow mb-4">
+                <div class="card shadow border-bottom-primary">
                     <div class="card-header py-3">
-                        <h6 class="m-0 font-weight-bold">投票口数</h6>
+                        <h6 class="m-0 font-weight-bold">リアルタイム投票口数</h6>
                     </div>
                     <div class="card-body">
                         <div class="row">
-                            <div class="col-2 px-0 d-flex align-items-center">
-                                <img src="{{ url_for('static', filename='img/logo-_1.png') }}" alt="BIG" class="img-fluid">
+                            <div class="col-lg-1 col-2 px-0 d-flex align-items-center">
+                                <img src="{{ url_for('static', filename='img/logo-_1.png') }}" alt="BIG"
+                                     class="img-fluid">
                             </div>
-                            <div class="col-10 px-1">
+                            <div class="col-lg-11 col-10 px-1">
                                 <h4 class="small font-weight-bold">　<span
-                                        class="float-right">1,775,253</span></h4>
+                                        class="float-right">{{ "1,775,253" }}</span></h4>
                                 <div class="progress mb-4">
                                     <div class="progress-bar" role="progressbar"
                                          style="width: {{ 1775253 / 2296532 * 100 }}%; background-color: #e4262e;"
@@ -33,12 +33,13 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-2 px-0 d-flex align-items-center">
-                                <img src="{{ url_for('static', filename='img/logo-_10.png') }}" alt="MEGA BIG" class="img-fluid">
+                            <div class="col-lg-1 col-2 px-0 d-flex align-items-center">
+                                <img src="{{ url_for('static', filename='img/logo-_10.png') }}" alt="MEGA BIG"
+                                     class="img-fluid">
                             </div>
-                            <div class="col-10 px-1">
+                            <div class="col-lg-11 col-10 px-1">
                                 <h4 class="small font-weight-bold">　<span
-                                        class="float-right">1,577,503</span></h4>
+                                        class="float-right">{{ "1,577,503" }}</span></h4>
                                 <div class="progress mb-4">
                                     <div class="progress-bar" role="progressbar"
                                          style="width: {{ 1577503 / 2296532 * 100 }}%; background-color: #d6be4d;"
@@ -47,12 +48,13 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-2 px-0 d-flex align-items-center">
-                                <img src="{{ url_for('static', filename='img/logo-_2.png') }}" alt="100円BIG" class="img-fluid">
+                            <div class="col-lg-1 col-2 px-0 d-flex align-items-center">
+                                <img src="{{ url_for('static', filename='img/logo-_2.png') }}" alt="100円BIG"
+                                     class="img-fluid">
                             </div>
-                            <div class="col-10 px-1">
+                            <div class="col-lg-11 col-10 px-1">
                                 <h4 class="small font-weight-bold">　<span
-                                        class="float-right">2,296,532</span></h4>
+                                        class="float-right">{{ "2,296,532" }}</span></h4>
                                 <div class="progress mb-4">
                                     <div class="progress-bar" role="progressbar"
                                          style="width: {{ 2296532 / 2296532 * 100 }}%; background-color: #ec842a;"
@@ -61,12 +63,13 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-2 px-0 d-flex align-items-center">
-                                <img src="{{ url_for('static', filename='img/logo-_3.png') }}" alt="BIG1000" class="img-fluid">
+                            <div class="col-lg-1 col-2 px-0 d-flex align-items-center">
+                                <img src="{{ url_for('static', filename='img/logo-_3.png') }}" alt="BIG1000"
+                                     class="img-fluid">
                             </div>
-                            <div class="col-10 px-1">
+                            <div class="col-lg-11 col-10 px-1">
                                 <h4 class="small font-weight-bold">　<span
-                                        class="float-right">545,183</span></h4>
+                                        class="float-right">{{ "545,183" }}</span></h4>
                                 <div class="progress mb-4">
                                     <div class="progress-bar" role="progressbar"
                                          style="width: {{ 545183 / 2296532 * 100 }}%; background-color: #e670a2;"
@@ -75,12 +78,13 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-2 px-0 d-flex align-items-center">
-                                <img src="{{ url_for('static', filename='img/logo-_4.png') }}" alt="mini BIG" class="img-fluid">
+                            <div class="col-lg-1 col-2 px-0 d-flex align-items-center">
+                                <img src="{{ url_for('static', filename='img/logo-_4.png') }}" alt="mini BIG"
+                                     class="img-fluid">
                             </div>
-                            <div class="col-10 px-1">
+                            <div class="col-lg-11 col-10 px-1">
                                 <h4 class="small font-weight-bold">　<span
-                                        class="float-right">424,304</span></h4>
+                                        class="float-right">{{ "424,304" }}</span></h4>
                                 <div class="progress">
                                     <div class="progress-bar" role="progressbar"
                                          style="width: {{ 424304 / 2296532 * 100 }}%; background-color: #abcb3b;"
@@ -91,171 +95,176 @@
                     </div>
                 </div>
             </div>
+
+            <!-- 期待値カード -->
+            <div class="col-lg-6 mb-4">
+                <!-- Project Card Example -->
+                <div class="card shadow border-bottom-primary">
+                    <div class="card-header py-3">
+                        <h6 class="m-0 font-weight-bold">リアルタイム期待値</h6>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-lg-1 col-2 px-0 d-flex align-items-center">
+                                <img src="{{ url_for('static', filename='img/logo-_1.png') }}" alt="BIG"
+                                     class="img-fluid">
+                            </div>
+                            <div class="col-lg-11 col-10 px-1">
+                                <h4 class="small font-weight-bold">　<span
+                                        class="float-right text-primary">{{ "0.82" }}倍</span></h4>
+                                <div class="progress mb-4">
+                                    <div class="progress-bar" role="progressbar"
+                                         style="width: {{ 0.82 / 1.00 * 100 }}%; background-color: #e4262e;"
+                                         aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-1 col-2 px-0 d-flex align-items-center">
+                                <img src="{{ url_for('static', filename='img/logo-_10.png') }}" alt="MEGA BIG"
+                                     class="img-fluid">
+                            </div>
+                            <div class="col-lg-11 col-10 px-1">
+                                <h4 class="small font-weight-bold">　<span
+                                        class="float-right text-primary">{{ "0.50" }}倍</span></h4>
+                                <div class="progress mb-4">
+                                    <div class="progress-bar" role="progressbar"
+                                         style="width: {{ 0.50 / 1.00 * 100 }}%; background-color: #d6be4d;"
+                                         aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-1 col-2 px-0 d-flex align-items-center">
+                                <img src="{{ url_for('static', filename='img/logo-_2.png') }}" alt="100円BIG"
+                                     class="img-fluid">
+                            </div>
+                            <div class="col-lg-11 col-10 px-1">
+                                <h4 class="small font-weight-bold">　<span
+                                        class="float-right text-danger">{{ "1.00" }}倍</span></h4>
+                                <div class="progress mb-4">
+                                    <div class="progress-bar" role="progressbar"
+                                         style="width: {{ 1.00 / 1.00 * 100 }}%; background-color: #ec842a;"
+                                         aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-1 col-2 px-0 d-flex align-items-center">
+                                <img src="{{ url_for('static', filename='img/logo-_3.png') }}" alt="BIG1000"
+                                     class="img-fluid">
+                            </div>
+                            <div class="col-lg-11 col-10 px-1">
+                                <h4 class="small font-weight-bold">　<span
+                                        class="float-right text-primary">{{ "0.50" }}倍</span></h4>
+                                <div class="progress mb-4">
+                                    <div class="progress-bar" role="progressbar"
+                                         style="width: {{ 0.5 / 1.00 * 100 }}%; background-color: #e670a2;"
+                                         aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-1 col-2 px-0 d-flex align-items-center">
+                                <img src="{{ url_for('static', filename='img/logo-_4.png') }}" alt="mini BIG"
+                                     class="img-fluid">
+                            </div>
+                            <div class="col-lg-11 col-10 px-1">
+                                <h4 class="small font-weight-bold">　<span
+                                        class="float-right text-primary">{{ "0.50" }}倍</span></h4>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar"
+                                         style="width: {{ 0.5 / 1.00 * 100 }}%; background-color: #abcb3b;"
+                                         aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
 
-        <!-- Content Row -->
-        <div class="row">
-            <!-- Earnings (Monthly) Card Example -->
-            <div class="col-xl-3 col-md-6 mb-4">
-                <div class="card border-left-primary shadow h-100 py-2">
-                    <div class="card-body">
-                        <div class="row no-gutters align-items-center">
-                            <div class="col mr-2">
-                                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                    Earnings (Monthly)
-                                </div>
-                                <div class="h5 mb-0 font-weight-bold text-gray-800">$40,000</div>
-                            </div>
-                            <div class="col-auto">
-                                <i class="fas fa-calendar fa-2x text-gray-300"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Earnings (Monthly) Card Example -->
-            <div class="col-xl-3 col-md-6 mb-4">
-                <div class="card border-left-success shadow h-100 py-2">
-                    <div class="card-body">
-                        <div class="row no-gutters align-items-center">
-                            <div class="col mr-2">
-                                <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                    Earnings (Annual)
-                                </div>
-                                <div class="h5 mb-0 font-weight-bold text-gray-800">$215,000</div>
-                            </div>
-                            <div class="col-auto">
-                                <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Earnings (Monthly) Card Example -->
-            <div class="col-xl-3 col-md-6 mb-4">
-                <div class="card border-left-info shadow h-100 py-2">
-                    <div class="card-body">
-                        <div class="row no-gutters align-items-center">
-                            <div class="col mr-2">
-                                <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Tasks
-                                </div>
-                                <div class="row no-gutters align-items-center">
-                                    <div class="col-auto">
-                                        <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">50%</div>
-                                    </div>
-                                    <div class="col">
-                                        <div class="progress progress-sm mr-2">
-                                            <div class="progress-bar bg-info" role="progressbar"
-                                                 style="width: 50%" aria-valuenow="50" aria-valuemin="0"
-                                                 aria-valuemax="100"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-auto">
-                                <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Pending Requests Card Example -->
-            <div class="col-xl-3 col-md-6 mb-4">
-                <div class="card border-left-warning shadow h-100 py-2">
-                    <div class="card-body">
-                        <div class="row no-gutters align-items-center">
-                            <div class="col mr-2">
-                                <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                    Pending Requests
-                                </div>
-                                <div class="h5 mb-0 font-weight-bold text-gray-800">18</div>
-                            </div>
-                            <div class="col-auto">
-                                <i class="fas fa-comments fa-2x text-gray-300"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
         <!-- Content Row -->
 
         <div class="row">
+            <div class="col-12">
+                <div class="card shadow border-bottom-primary mb-4">
+                    <div class="card-header py-3">
+                        <h6 class="m-0 font-weight-bold">その他データ</h6>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <div id="dataTable_wrapper" class="dataTables_wrapper dt-bootstrap4">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <table class="table table-bordered dataTable" id="dataTable" width="100%"
+                                               cellspacing="0" role="grid" aria-describedby="dataTable_info"
+                                               style="width: 100%;">
+                                            <thead>
+                                            <tr role="row">
+                                                <th class="sorting sorting_asc" tabindex="0" aria-controls="dataTable"
+                                                    rowspan="1" colspan="1" aria-sort="ascending"
+                                                    aria-label="Name: activate to sort column descending"
+                                                    style="width: 25%;">商品名
+                                                </th>
+                                                <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1"
+                                                    colspan="1" aria-label="Position: activate to sort column ascending"
+                                                    style="width: 25%;">キャリーオーバー
+                                                </th>
+                                                <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1"
+                                                    colspan="1" aria-label="Office: activate to sort column ascending"
+                                                    style="width: 25%;">最終投票口数(予想)
+                                                </th>
+                                                <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1"
+                                                    colspan="1" aria-label="Age: activate to sort column ascending"
+                                                    style="width: 25%;">最終期待値(予想)
+                                                </th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
 
-            <!-- Area Chart -->
-            <div class="col-xl-8 col-lg-7">
-                <div class="card shadow mb-4">
-                    <!-- Card Header - Dropdown -->
-                    <div
-                            class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                        <h6 class="m-0 font-weight-bold text-primary">Earnings Overview</h6>
-                        <div class="dropdown no-arrow">
-                            <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
-                                 aria-labelledby="dropdownMenuLink">
-                                <div class="dropdown-header">Dropdown Header:</div>
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Something else here</a>
+                                            <tr class="odd">
+                                                <td class="sorting_1">BIG</td>
+                                                <td class="text-right">{{ "173,615,040" }}</td>
+                                                <td class="text-right">Tokyo</td>
+                                                <td class="text-right">33</td>
+                                            </tr>
+                                            <tr class="even">
+                                                <td class="sorting_1">MEGA BIG</td>
+                                                <td class="text-right">{{ "0" }}</td>
+                                                <td class="text-right">London</td>
+                                                <td class="text-right">47</td>
+                                            </tr>
+                                            <tr class="odd">
+                                                <td class="sorting_1">100円BIG</td>
+                                                <td class="text-right">{{ "115,975,890" }}</td>
+                                                <td class="text-right">Tokyo</td>
+                                                <td class="text-right">33</td>
+                                            </tr>
+                                            <tr class="even">
+                                                <td class="sorting_1">BIG1000</td>
+                                                <td class="text-right">{{ "0" }}</td>
+                                                <td class="text-right">London</td>
+                                                <td class="text-right">47</td>
+                                            </tr>
+                                            <tr class="odd">
+                                                <td class="sorting_1">mini BIG</td>
+                                                <td class="text-right">{{ "0" }}</td>
+                                                <td class="text-right">Tokyo</td>
+                                                <td class="text-right">33</td>
+                                            </tr>
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <!-- Card Body -->
-                    <div class="card-body">
-                        <div class="chart-area">
-                            <canvas id="myAreaChart"></canvas>
-                        </div>
-                    </div>
                 </div>
-            </div>
-            <!-- Pie Chart -->
-            <div class="col-xl-4 col-lg-5">
-                <div class="card shadow mb-4">
-                    <!-- Card Header - Dropdown -->
-                    <div
-                            class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                        <h6 class="m-0 font-weight-bold text-primary">Revenue Sources</h6>
-                        <div class="dropdown no-arrow">
-                            <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
-                                 aria-labelledby="dropdownMenuLink">
-                                <div class="dropdown-header">Dropdown Header:</div>
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Something else here</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Card Body -->
-                    <div class="card-body">
-                        <div class="chart-pie pt-4 pb-2">
-                            <canvas id="myPieChart"></canvas>
-                        </div>
-                        <div class="mt-4 text-center small">
-                                        <span class="mr-2">
-                                            <i class="fas fa-circle text-primary"></i> Direct
-                                        </span>
-                            <span class="mr-2">
-                                            <i class="fas fa-circle text-success"></i> Social
-                                        </span>
-                            <span class="mr-2">
-                                            <i class="fas fa-circle text-info"></i> Referral
-                                        </span>
-                        </div>
-                    </div>
-                </div>
+
             </div>
         </div>
 
