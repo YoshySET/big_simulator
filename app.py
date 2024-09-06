@@ -6,11 +6,15 @@ from flask import Flask, render_template, request, abort, jsonify
 app = Flask(__name__)
 
 VALID_API_KEY = os.getenv('VALID_API_KEY')
+data_json_path = "data.json"
 
 
 @app.route('/', methods=['GET'])
 def index():
-    return render_template('index.html')
+    with open(data_json_path, "r", encoding="utf-8") as json_file:
+        big_data = json.load(json_file)
+
+    return render_template('index.html', big_data=big_data)
 
 
 @app.route('/charts.html', methods=['GET'])
@@ -38,7 +42,7 @@ def post_json_data():
         print(e)
 
     try:
-        with open("data.json", 'w') as json_file:
+        with open(data_json_path, 'w') as json_file:
             json.dump(json_dict, json_file, indent=4)
     except Exception as e:
         print(e)
