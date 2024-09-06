@@ -14,7 +14,7 @@
                 <!-- Project Card Example -->
                 <div class="card shadow border-bottom-primary">
                     <div class="card-header py-3">
-                        <h6 class="m-0 font-weight-bold">リアルタイム期待値（※最終予想値）</h6>
+                        <h6 class="m-0 font-weight-bold">リアルタイム期待値（※予想最終値）</h6>
                     </div>
                     <div class="card-body">
                         <div class="row">
@@ -117,7 +117,7 @@
                 <!-- Project Card Example -->
                 <div class="card shadow border-bottom-primary">
                     <div class="card-header py-3">
-                        <h6 class="m-0 font-weight-bold">リアルタイム投票口数（※最終予想値）</h6>
+                        <h6 class="m-0 font-weight-bold">リアルタイム投票口数（※予想最終値）</h6>
                     </div>
                     <div class="card-body">
                         <div class="row">
@@ -127,10 +127,10 @@
                             </div>
                             <div class="col-lg-11 col-10 px-1">
                                 <h4 class="small font-weight-bold">　<span
-                                        class="float-right">{{ big_data["big"]["nowVote"] }}</span></h4>
+                                        class="float-right">{{ big_data["big"]["nowVote"] }}({{ big_data["big"]["endVote"] }})</span></h4>
                                 <div class="progress mb-4">
                                     <div class="progress-bar" role="progressbar"
-                                         style="width: {{ 1775253 / max_vote * 100 }}%; background-color: #e4262e;"
+                                         style="width: {{ big_data["big"]["nowVoteFloat"] / max_vote * 100 }}%; background-color: #e4262e;"
                                          aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                             </div>
@@ -142,10 +142,10 @@
                             </div>
                             <div class="col-lg-11 col-10 px-1">
                                 <h4 class="small font-weight-bold">　<span
-                                        class="float-right">{{ big_data["megaBIG"]["nowVote"] }}</span></h4>
+                                        class="float-right">{{ big_data["megaBIG"]["nowVote"] }}({{ big_data["megaBIG"]["endVote"] }})</span></h4>
                                 <div class="progress mb-4">
                                     <div class="progress-bar" role="progressbar"
-                                         style="width: {{ 1577503 / max_vote * 100 }}%; background-color: #d6be4d;"
+                                         style="width: {{ big_data["megaBIG"]["nowVoteFloat"] / max_vote * 100 }}%; background-color: #d6be4d;"
                                          aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                             </div>
@@ -157,10 +157,10 @@
                             </div>
                             <div class="col-lg-11 col-10 px-1">
                                 <h4 class="small font-weight-bold">　<span
-                                        class="float-right">{{ big_data["100Big"]["nowVote"] }}</span></h4>
+                                        class="float-right">{{ big_data["100Big"]["nowVote"] }}({{ big_data["100Big"]["endVote"] }})</span></h4>
                                 <div class="progress mb-4">
                                     <div class="progress-bar" role="progressbar"
-                                         style="width: {{ 2296532 / max_vote * 100 }}%; background-color: #ec842a;"
+                                         style="width: {{ big_data["100Big"]["nowVoteFloat"] / max_vote * 100 }}%; background-color: #ec842a;"
                                          aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                             </div>
@@ -172,10 +172,10 @@
                             </div>
                             <div class="col-lg-11 col-10 px-1">
                                 <h4 class="small font-weight-bold">　<span
-                                        class="float-right">{{ big_data["big1000"]["nowVote"] }}</span></h4>
+                                        class="float-right">{{ big_data["big1000"]["nowVote"] }}({{ big_data["big1000"]["endVote"] }})</span></h4>
                                 <div class="progress mb-4">
                                     <div class="progress-bar" role="progressbar"
-                                         style="width: {{ 545183 / max_vote * 100 }}%; background-color: #e670a2;"
+                                         style="width: {{ big_data["big1000"]["nowVoteFloat"] / max_vote * 100 }}%; background-color: #e670a2;"
                                          aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                             </div>
@@ -187,10 +187,10 @@
                             </div>
                             <div class="col-lg-11 col-10 px-1">
                                 <h4 class="small font-weight-bold">　<span
-                                        class="float-right">{{ big_data["miniBig"]["nowVote"] }}</span></h4>
+                                        class="float-right">{{ big_data["miniBig"]["nowVote"] }}({{ big_data["miniBig"]["endVote"] }})</span></h4>
                                 <div class="progress">
                                     <div class="progress-bar" role="progressbar"
-                                         style="width: {{ 424304 / max_vote * 100 }}%; background-color: #abcb3b;"
+                                         style="width: {{ big_data["miniBig"]["nowVoteFloat"] / max_vote * 100 }}%; background-color: #abcb3b;"
                                          aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                             </div>
