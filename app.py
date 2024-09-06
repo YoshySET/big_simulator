@@ -14,7 +14,12 @@ def index():
     with open(data_json_path, "r", encoding="utf-8") as json_file:
         big_data = json.load(json_file)
 
-    return render_template('index.html', big_data=big_data)
+    max_vote = 0
+    for name in ["big", "megaBIG", "100Big", "big1000", "miniBig"]:
+        now_vote = int(big_data[name]["nowVote"].replace(",", ""))
+        max_vote = now_vote if max_vote < now_vote else max_vote
+
+    return render_template('index.html', big_data=big_data, max_vote=max_vote)
 
 
 @app.route('/charts.html', methods=['GET'])
