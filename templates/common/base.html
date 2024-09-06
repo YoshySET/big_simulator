@@ -13,7 +13,17 @@
         rel="stylesheet">
     <!-- Custom styles for this template-->
     <link href="{{ url_for('static', filename='css/sb-admin-2.min.css') }}" rel="stylesheet">
+    <!-- chartJS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .chart-area {
+            position: relative;
+            width: 100%;  /* 幅を100%に */
+            height: 25vh; /* 高さを画面の50%に */
+        }
+    </style>
     <title>BIG期待値シミュレーター</title>
+
 </head>
 
 <body id="page-top">
