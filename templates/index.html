@@ -4,8 +4,8 @@
 
         <!-- Page Heading -->
         <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h4 mb-0 text-gray-800">第{{ "1476" }}回 BIG情報</h1>
-            <span class="small">※{{ "2024/07/07 12:12:12" }}更新</span>
+            <h1 class="h4 mb-0 text-gray-800">{{ big_data["title"] }}</h1>
+            <span class="small">{{ big_data["updatedAt"] }}</span>
         </div>
 
         <div class="row">
@@ -24,10 +24,10 @@
                             </div>
                             <div class="col-lg-11 col-10 px-1">
                                 <h4 class="small font-weight-bold">　<span
-                                        class="float-right text-primary">{{ "0.82" }}倍</span></h4>
+                                        class="float-right text-primary">{{ big_data["big"]["nowExpected"] }}倍</span></h4>
                                 <div class="progress mb-4">
                                     <div class="progress-bar" role="progressbar"
-                                         style="width: {{ 0.82 / 1.00 * 100 }}%; background-color: #e4262e;"
+                                         style="width: {{ float(big_data["big"]["nowExpected"]) * 100 }}%; background-color: #e4262e;"
                                          aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                             </div>
@@ -39,10 +39,10 @@
                             </div>
                             <div class="col-lg-11 col-10 px-1">
                                 <h4 class="small font-weight-bold">　<span
-                                        class="float-right text-primary">{{ "0.50" }}倍</span></h4>
+                                        class="float-right text-primary">{{ big_data["megaBIG"]["nowExpected"] }}倍</span></h4>
                                 <div class="progress mb-4">
                                     <div class="progress-bar" role="progressbar"
-                                         style="width: {{ 0.50 / 1.00 * 100 }}%; background-color: #d6be4d;"
+                                         style="width: {{ float(big_data["megaBIG"]["nowExpected"]) * 100 }}%; background-color: #d6be4d;"
                                          aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                             </div>
@@ -54,10 +54,10 @@
                             </div>
                             <div class="col-lg-11 col-10 px-1">
                                 <h4 class="small font-weight-bold">　<span
-                                        class="float-right text-danger">{{ "1.00" }}倍</span></h4>
+                                        class="float-right text-danger">{{ big_data["100Big"]["nowExpected"] }}倍</span></h4>
                                 <div class="progress mb-4">
                                     <div class="progress-bar" role="progressbar"
-                                         style="width: {{ 1.00 / 1.00 * 100 }}%; background-color: #ec842a;"
+                                         style="width: {{ float(big_data["100Big"]["nowExpected"]) * 100 }}%; background-color: #ec842a;"
                                          aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                             </div>
@@ -69,10 +69,10 @@
                             </div>
                             <div class="col-lg-11 col-10 px-1">
                                 <h4 class="small font-weight-bold">　<span
-                                        class="float-right text-primary">{{ "0.50" }}倍</span></h4>
+                                        class="float-right text-primary">{{ big_data["big1000"]["nowExpected"] }}倍</span></h4>
                                 <div class="progress mb-4">
                                     <div class="progress-bar" role="progressbar"
-                                         style="width: {{ 0.5 / 1.00 * 100 }}%; background-color: #e670a2;"
+                                         style="width: {{ float(big_data["big1000"]["nowExpected"]) * 100 }}%; background-color: #e670a2;"
                                          aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                             </div>
@@ -84,10 +84,10 @@
                             </div>
                             <div class="col-lg-11 col-10 px-1">
                                 <h4 class="small font-weight-bold">　<span
-                                        class="float-right text-primary">{{ "0.50" }}倍</span></h4>
+                                        class="float-right text-primary">{{ big_data["miniBig"]["nowExpected"] }}倍</span></h4>
                                 <div class="progress">
                                     <div class="progress-bar" role="progressbar"
-                                         style="width: {{ 0.5 / 1.00 * 100 }}%; background-color: #abcb3b;"
+                                         style="width: {{ float(big_data["miniBig"]["nowExpected"]) * 100 }}%; background-color: #abcb3b;"
                                          aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                             </div>
