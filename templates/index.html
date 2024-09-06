@@ -9,93 +9,6 @@
         </div>
 
         <div class="row">
-            <!-- 投票口数カード -->
-            <div class="col-lg-6 mb-4">
-                <!-- Project Card Example -->
-                <div class="card shadow border-bottom-primary">
-                    <div class="card-header py-3">
-                        <h6 class="m-0 font-weight-bold">リアルタイム投票口数</h6>
-                    </div>
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-lg-1 col-2 px-0 d-flex align-items-center">
-                                <img src="{{ url_for('static', filename='img/logo-_1.png') }}" alt="BIG"
-                                     class="img-fluid">
-                            </div>
-                            <div class="col-lg-11 col-10 px-1">
-                                <h4 class="small font-weight-bold">　<span
-                                        class="float-right">{{ "1,775,253" }}</span></h4>
-                                <div class="progress mb-4">
-                                    <div class="progress-bar" role="progressbar"
-                                         style="width: {{ 1775253 / 2296532 * 100 }}%; background-color: #e4262e;"
-                                         aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-1 col-2 px-0 d-flex align-items-center">
-                                <img src="{{ url_for('static', filename='img/logo-_10.png') }}" alt="MEGA BIG"
-                                     class="img-fluid">
-                            </div>
-                            <div class="col-lg-11 col-10 px-1">
-                                <h4 class="small font-weight-bold">　<span
-                                        class="float-right">{{ "1,577,503" }}</span></h4>
-                                <div class="progress mb-4">
-                                    <div class="progress-bar" role="progressbar"
-                                         style="width: {{ 1577503 / 2296532 * 100 }}%; background-color: #d6be4d;"
-                                         aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-1 col-2 px-0 d-flex align-items-center">
-                                <img src="{{ url_for('static', filename='img/logo-_2.png') }}" alt="100円BIG"
-                                     class="img-fluid">
-                            </div>
-                            <div class="col-lg-11 col-10 px-1">
-                                <h4 class="small font-weight-bold">　<span
-                                        class="float-right">{{ "2,296,532" }}</span></h4>
-                                <div class="progress mb-4">
-                                    <div class="progress-bar" role="progressbar"
-                                         style="width: {{ 2296532 / 2296532 * 100 }}%; background-color: #ec842a;"
-                                         aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-1 col-2 px-0 d-flex align-items-center">
-                                <img src="{{ url_for('static', filename='img/logo-_3.png') }}" alt="BIG1000"
-                                     class="img-fluid">
-                            </div>
-                            <div class="col-lg-11 col-10 px-1">
-                                <h4 class="small font-weight-bold">　<span
-                                        class="float-right">{{ "545,183" }}</span></h4>
-                                <div class="progress mb-4">
-                                    <div class="progress-bar" role="progressbar"
-                                         style="width: {{ 545183 / 2296532 * 100 }}%; background-color: #e670a2;"
-                                         aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-1 col-2 px-0 d-flex align-items-center">
-                                <img src="{{ url_for('static', filename='img/logo-_4.png') }}" alt="mini BIG"
-                                     class="img-fluid">
-                            </div>
-                            <div class="col-lg-11 col-10 px-1">
-                                <h4 class="small font-weight-bold">　<span
-                                        class="float-right">{{ "424,304" }}</span></h4>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar"
-                                         style="width: {{ 424304 / 2296532 * 100 }}%; background-color: #abcb3b;"
-                                         aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
             <!-- 期待値カード -->
             <div class="col-lg-6 mb-4">
                 <!-- Project Card Example -->
@@ -183,90 +96,271 @@
                 </div>
 
             </div>
-        </div>
 
-
-        <!-- Content Row -->
-
-        <div class="row">
-            <div class="col-12">
-                <div class="card shadow border-bottom-primary mb-4">
+            <!-- 投票口数カード -->
+            <div class="col-lg-6 mb-4">
+                <!-- Project Card Example -->
+                <div class="card shadow border-bottom-primary">
                     <div class="card-header py-3">
-                        <h6 class="m-0 font-weight-bold">その他データ</h6>
+                        <h6 class="m-0 font-weight-bold">リアルタイム投票口数</h6>
                     </div>
                     <div class="card-body">
-                        <div class="table-responsive">
-                            <div id="dataTable_wrapper" class="dataTables_wrapper dt-bootstrap4">
-                                <div class="row">
-                                    <div class="col-sm-12">
-                                        <table class="table table-bordered dataTable" id="dataTable" width="100%"
-                                               cellspacing="0" role="grid" aria-describedby="dataTable_info"
-                                               style="width: 100%;">
-                                            <thead>
-                                            <tr role="row">
-                                                <th class="sorting sorting_asc" tabindex="0" aria-controls="dataTable"
-                                                    rowspan="1" colspan="1" aria-sort="ascending"
-                                                    aria-label="Name: activate to sort column descending"
-                                                    style="width: 25%;">商品名
-                                                </th>
-                                                <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1"
-                                                    colspan="1" aria-label="Position: activate to sort column ascending"
-                                                    style="width: 25%;">キャリーオーバー
-                                                </th>
-                                                <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1"
-                                                    colspan="1" aria-label="Office: activate to sort column ascending"
-                                                    style="width: 25%;">最終投票口数(予想)
-                                                </th>
-                                                <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1"
-                                                    colspan="1" aria-label="Age: activate to sort column ascending"
-                                                    style="width: 25%;">最終期待値(予想)
-                                                </th>
-                                            </tr>
-                                            </thead>
-                                            <tbody>
-
-                                            <tr class="odd">
-                                                <td class="sorting_1">BIG</td>
-                                                <td class="text-right">{{ "173,615,040" }}</td>
-                                                <td class="text-right">Tokyo</td>
-                                                <td class="text-right">33</td>
-                                            </tr>
-                                            <tr class="even">
-                                                <td class="sorting_1">MEGA BIG</td>
-                                                <td class="text-right">{{ "0" }}</td>
-                                                <td class="text-right">London</td>
-                                                <td class="text-right">47</td>
-                                            </tr>
-                                            <tr class="odd">
-                                                <td class="sorting_1">100円BIG</td>
-                                                <td class="text-right">{{ "115,975,890" }}</td>
-                                                <td class="text-right">Tokyo</td>
-                                                <td class="text-right">33</td>
-                                            </tr>
-                                            <tr class="even">
-                                                <td class="sorting_1">BIG1000</td>
-                                                <td class="text-right">{{ "0" }}</td>
-                                                <td class="text-right">London</td>
-                                                <td class="text-right">47</td>
-                                            </tr>
-                                            <tr class="odd">
-                                                <td class="sorting_1">mini BIG</td>
-                                                <td class="text-right">{{ "0" }}</td>
-                                                <td class="text-right">Tokyo</td>
-                                                <td class="text-right">33</td>
-                                            </tr>
-
-                                            </tbody>
-                                        </table>
-                                    </div>
+                        <div class="row">
+                            <div class="col-lg-1 col-2 px-0 d-flex align-items-center">
+                                <img src="{{ url_for('static', filename='img/logo-_1.png') }}" alt="BIG"
+                                     class="img-fluid">
+                            </div>
+                            <div class="col-lg-11 col-10 px-1">
+                                <h4 class="small font-weight-bold">　<span
+                                        class="float-right">{{ "1,775,253" }}</span></h4>
+                                <div class="progress mb-4">
+                                    <div class="progress-bar" role="progressbar"
+                                         style="width: {{ 1775253 / 2296532 * 100 }}%; background-color: #e4262e;"
+                                         aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-1 col-2 px-0 d-flex align-items-center">
+                                <img src="{{ url_for('static', filename='img/logo-_10.png') }}" alt="MEGA BIG"
+                                     class="img-fluid">
+                            </div>
+                            <div class="col-lg-11 col-10 px-1">
+                                <h4 class="small font-weight-bold">　<span
+                                        class="float-right">{{ "1,577,503" }}</span></h4>
+                                <div class="progress mb-4">
+                                    <div class="progress-bar" role="progressbar"
+                                         style="width: {{ 1577503 / 2296532 * 100 }}%; background-color: #d6be4d;"
+                                         aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-1 col-2 px-0 d-flex align-items-center">
+                                <img src="{{ url_for('static', filename='img/logo-_2.png') }}" alt="100円BIG"
+                                     class="img-fluid">
+                            </div>
+                            <div class="col-lg-11 col-10 px-1">
+                                <h4 class="small font-weight-bold">　<span
+                                        class="float-right">{{ "2,296,532" }}</span></h4>
+                                <div class="progress mb-4">
+                                    <div class="progress-bar" role="progressbar"
+                                         style="width: {{ 2296532 / 2296532 * 100 }}%; background-color: #ec842a;"
+                                         aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-1 col-2 px-0 d-flex align-items-center">
+                                <img src="{{ url_for('static', filename='img/logo-_3.png') }}" alt="BIG1000"
+                                     class="img-fluid">
+                            </div>
+                            <div class="col-lg-11 col-10 px-1">
+                                <h4 class="small font-weight-bold">　<span
+                                        class="float-right">{{ "545,183" }}</span></h4>
+                                <div class="progress mb-4">
+                                    <div class="progress-bar" role="progressbar"
+                                         style="width: {{ 545183 / 2296532 * 100 }}%; background-color: #e670a2;"
+                                         aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-1 col-2 px-0 d-flex align-items-center">
+                                <img src="{{ url_for('static', filename='img/logo-_4.png') }}" alt="mini BIG"
+                                     class="img-fluid">
+                            </div>
+                            <div class="col-lg-11 col-10 px-1">
+                                <h4 class="small font-weight-bold">　<span
+                                        class="float-right">{{ "424,304" }}</span></h4>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar"
+                                         style="width: {{ 424304 / 2296532 * 100 }}%; background-color: #abcb3b;"
+                                         aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
+
+
+        <!-- 折れ線グラフ -->
+        {#        <div class="row">#}
+        {#            <!-- 折れ線グラフ -->#}
+        {#            <div class="col-lg-6">#}
+        {#                <div class="card shadow mb-4">#}
+        {#                    <!-- Card Header - Dropdown -->#}
+        {#                    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">#}
+        {#                        <h6 class="m-0 font-weight-bold">投票口数予想</h6>#}
+        {#                    </div>#}
+        {#                    <!-- Card Body -->#}
+        {#                    <div class="card-body">#}
+        {#                        <div class="chart-area">#}
+        {#                            <div class="chartjs-size-monitor">#}
+        {#                                <div class="chartjs-size-monitor-expand">#}
+        {#                                    <div class=""></div>#}
+        {#                                </div>#}
+        {#                                <div class="chartjs-size-monitor-shrink">#}
+        {#                                    <div class=""></div>#}
+        {#                                </div>#}
+        {#                            </div>#}
+        {#                            <canvas id="myAreaChartBig" width="1642" height="480"#}
+        {#                                    style="display: block; height: 320px; width: 1095px;"#}
+        {#                                    class="chartjs-render-monitor"></canvas>#}
+        {#                        </div>#}
+        {#                    </div>#}
+        {#                </div>#}
+        {#            </div>#}
+        {#        </div>#}
+        <script>
+            // キャリーオーバー額のデータ
+            const carryoverAmounts = [5000000, 3000000, 2000000, 1000000, 500000];
+            const carryoverLabels = ['Category A', 'Category B', 'Category C', 'Category D', 'Category E'];
+
+            const ctx = document.getElementById('carryoverChart').getContext('2d');
+
+            // 円グラフの設定
+            const carryoverChart = new Chart(ctx, {
+                type: 'doughnut',  // ドーナツ型グラフ
+                data: {
+                    labels: carryoverLabels,  // ラベル
+                    datasets: [{
+                        label: 'Carryover Amounts',
+                        data: carryoverAmounts,  // データ
+                        backgroundColor: [
+                            'rgba(255, 99, 132, 0.7)',  // 赤
+                            'rgba(54, 162, 235, 0.7)',  // 青
+                            'rgba(255, 206, 86, 0.7)',  // 黄色
+                            'rgba(75, 192, 192, 0.7)',  // 緑
+                            'rgba(153, 102, 255, 0.7)'   // 紫
+                        ],
+                        borderColor: [
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(153, 102, 255, 1)'
+                        ],
+                        borderWidth: 1  // 枠線の太さ
+                    }]
+                },
+                options: {
+                    responsive: true,  // レスポンシブ対応
+                    plugins: {
+                        legend: {
+                            position: 'top',  // 凡例の位置
+                        }
+                    }
+                }
+            });
+
+
+            // チャートを描画するためのデータ
+            const data = {
+                labels: ['8/31', '9/1', '9/2', '9/3', '9/4', '9/5', '9/6', '9/7'],
+                datasets: [
+                    {
+                        label: 'BIG',
+                        borderColor: 'rgb(223,47,52)',  // 線の色
+                        data: [300000, 600000, 900000, 1200000, 1500000, 1800000, 2100000, 2523227],  // 各月のデータ
+                        segment: {
+                            borderDash: ctx => {
+                                // 破線を適用する条件
+                                const index = ctx.p1DataIndex;
+                                if (index >= {{ 7 }}) {
+                                    return [5, 5];  // 破線 (5pxの線、5pxの空白)
+                                } else {
+                                    return [];  // 通常の線
+                                }
+                            }
+                        }
+                    },
+                    {
+                        label: 'MEGA BIG',
+                        borderColor: 'rgb(211,189,91)',  // 線の色
+                        data: [300000, 600000, 900000, 1200000, 1500000, 1800000, 2100000, 2056245],  // 各月のデータ
+                        segment: {
+                            borderDash: ctx => {
+                                // 破線を適用する条件
+                                const index = ctx.p1DataIndex;
+                                if (index >= {{ 7 }}) {
+                                    return [5, 5];  // 破線 (5pxの線、5pxの空白)
+                                } else {
+                                    return [];  // 通常の線
+                                }
+                            }
+                        }
+                    },
+                    {
+                        label: '100円BIG',
+                        borderColor: 'rgb(232,133,59)',  // 線の色
+                        data: [300000, 600000, 900000, 1200000, 1500000, 1800000, 2100000, 3158607],  // 各月のデータ
+                        segment: {
+                            borderDash: ctx => {
+                                // 破線を適用する条件
+                                const index = ctx.p1DataIndex;
+                                if (index >= {{ 7 }}) {
+                                    return [5, 5];  // 破線 (5pxの線、5pxの空白)
+                                } else {
+                                    return [];  // 通常の線
+                                }
+                            }
+                        }
+                    },
+                    {
+                        label: 'BIG1000',
+                        borderColor: 'rgb(226,113,159)',  // 線の色
+                        data: [91223, 182654, 263550, 335585, 425598, 548620, 638564, 723899],  // 各月のデータ
+                        segment: {
+                            borderDash: ctx => {
+                                // 破線を適用する条件
+                                const index = ctx.p1DataIndex;
+                                if (index >= {{ 7 }}) {
+                                    return [5, 5];  // 破線 (5pxの線、5pxの空白)
+                                } else {
+                                    return [];  // 通常の線
+                                }
+                            }
+                        }
+                    },
+                    {
+                        label: 'mini BIG',
+                        borderColor: 'rgb(171,201,80)',  // 線の色
+                        data: [71249, 146598, 220564, 276541, 365587, 435079, 498743, 581867],  // 各月のデータ
+                        segment: {
+                            borderDash: ctx => {
+                                // 破線を適用する条件
+                                const index = ctx.p1DataIndex;
+                                if (index >= {{ 7 }}) {
+                                    return [5, 5];  // 破線 (5pxの線、5pxの空白)
+                                } else {
+                                    return [];  // 通常の線
+                                }
+                            }
+                        }
+                    },
+                ]
+            };
+
+            // チャートの設定
+            const config = {
+                type: 'line',  // エリアチャートは 'line' タイプ
+                data: data,
+                options: {
+                    responsive: true,  // レスポンシブ対応を有効化
+                    maintainAspectRatio: false,  // 画面サイズに応じて縦横比を維持しない
+                }
+            };
+
+            // チャートの初期化
+            const myAreaChart = new Chart(
+                document.getElementById('myAreaChartBig'),  // canvasのIDを指定
+                config  // 設定を渡す
+            );
+        </script>
+
 
     </div>
 {% endblock %}
