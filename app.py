@@ -23,6 +23,11 @@ def index():
     return render_template('index.html', big_data=big_data, max_vote=max_vote)
 
 
+@app.route('/about', methods=['GET'])
+def about():
+    return render_template('about.html')
+
+
 @app.route('/post-json-data', methods=['POST'])
 def post_json_data():
     api_key = request.headers.get('x-api-key')
