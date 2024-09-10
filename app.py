@@ -28,6 +28,11 @@ def about():
     return render_template('about.html')
 
 
+@app.route('/privacy-policy', methods=['GET'])
+def privacy_policy():
+    return render_template('privacy_policy.html')
+
+
 @app.route('/post-json-data', methods=['POST'])
 def post_json_data():
     api_key = request.headers.get('x-api-key')
