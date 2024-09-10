@@ -21,6 +21,12 @@
             <span>当サイトについて</span></a>
     </li>
 
+    <li class="nav-item {% if request.path == url_for('about') %}active{% endif %}">
+        <a class="nav-link" href="{{ url_for('privacy_policy') }}">
+            <i class="fas fa-user-shield"></i>
+            <span>プライバシーポリシー</span></a>
+    </li>
+
 {#    <hr class="sidebar-divider">#}
 {##}
 {#    <li class="nav-item">#}
