@@ -39,6 +39,10 @@
     </style>
     <title>{% block title %}{% endblock %}</title>
 
+    <!-- 特定のページをnoindexにする -->
+    {% if request.path == url_for('privacy_policy') %}
+        <meta name="robots" content="noindex">
+    {% endif %}
 </head>
 
 <body id="page-top">
