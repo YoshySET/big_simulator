@@ -163,4 +163,3 @@ cython_debug/
 
 # カスタム
 .local_scripts
-data.json

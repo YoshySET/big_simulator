@@ -1,0 +1,39 @@
+{
+  "title": "第1476回 BIG情報 (開催期間：2024/08/31 ~ 2024/09/07)",
+  "updatedAt": "2024/09/06 20:07:53 更新",
+  "big": {
+    "carryOver": "173,615,040",
+    "nowVote": "2,254,406",
+    "endVote": "2,630,140",
+    "nowExpected": "0.76",
+    "endExpected": "0.72"
+  },
+  "megaBIG": {
+    "carryOver": "0",
+    "nowVote": "1,832,287",
+    "endVote": "2,137,668",
+    "nowExpected": "0.50",
+    "endExpected": "0.50"
+  },
+  "100Big": {
+    "carryOver": "115,975,890",
+    "nowVote": "2,848,181",
+    "endVote": "3,322,878",
+    "nowExpected": "0.91",
+    "endExpected": "0.85"
+  },
+  "big1000": {
+    "carryOver": "0",
+    "nowVote": "662,875",
+    "endVote": "773,354",
+    "nowExpected": "0.50",
+    "endExpected": "0.50"
+  },
+  "miniBig": {
+    "carryOver": "0",
+    "nowVote": "522,202",
+    "endVote": "609,236",
+    "nowExpected": "0.50",
+    "endExpected": "0.50"
+  }
+}
