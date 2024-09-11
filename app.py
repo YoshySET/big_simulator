@@ -1,5 +1,6 @@
 import json
 import os
+import random
 
 from flask import Flask, render_template, request, abort, jsonify
 
@@ -7,6 +8,7 @@ app = Flask(__name__)
 
 VALID_API_KEY = os.getenv('VALID_API_KEY')
 data_json_path = "data.json"
+ad_list_json_path = "ad_list.json"
 
 
 @app.route('/', methods=['GET'])
@@ -14,13 +16,18 @@ def index():
     with open(data_json_path, "r", encoding="utf-8") as json_file:
         big_data = json.load(json_file)
 
+    with open(ad_list_json_path, "r", encoding="utf-8") as json_file:
+        ad_list_data = json.load(json_file)
+
+    ad_list = random.sample(ad_list_data["adList"], 2)
+
     max_vote = 0.00
     for name in ["big", "megaBIG", "100Big", "big1000", "miniBig"]:
         now_vote = float(big_data[name]["nowVote"].replace(",", ""))
         big_data[name]["nowVoteFloat"] = now_vote
         max_vote = now_vote if max_vote < now_vote else max_vote
 
-    return render_template('index.html', big_data=big_data, max_vote=max_vote)
+    return render_template('index.html', big_data=big_data, max_vote=max_vote, ad_list=ad_list)
 
 
 @app.route('/about', methods=['GET'])

@@ -128,7 +128,8 @@
                             </div>
                             <div class="col-lg-11 col-10 px-1">
                                 <h4 class="small font-weight-bold">　<span
-                                        class="float-right">{{ big_data["big"]["nowVote"] }}({{ big_data["big"]["endVote"] }})</span></h4>
+                                        class="float-right">{{ big_data["big"]["nowVote"] }}({{ big_data["big"]["endVote"] }})</span>
+                                </h4>
                                 <div class="progress mb-4">
                                     <div class="progress-bar" role="progressbar"
                                          style="width: {{ big_data["big"]["nowVoteFloat"] / max_vote * 100 }}%; background-color: #e4262e;"
@@ -143,7 +144,8 @@
                             </div>
                             <div class="col-lg-11 col-10 px-1">
                                 <h4 class="small font-weight-bold">　<span
-                                        class="float-right">{{ big_data["megaBIG"]["nowVote"] }}({{ big_data["megaBIG"]["endVote"] }})</span></h4>
+                                        class="float-right">{{ big_data["megaBIG"]["nowVote"] }}({{ big_data["megaBIG"]["endVote"] }})</span>
+                                </h4>
                                 <div class="progress mb-4">
                                     <div class="progress-bar" role="progressbar"
                                          style="width: {{ big_data["megaBIG"]["nowVoteFloat"] / max_vote * 100 }}%; background-color: #d6be4d;"
@@ -158,7 +160,8 @@
                             </div>
                             <div class="col-lg-11 col-10 px-1">
                                 <h4 class="small font-weight-bold">　<span
-                                        class="float-right">{{ big_data["100Big"]["nowVote"] }}({{ big_data["100Big"]["endVote"] }})</span></h4>
+                                        class="float-right">{{ big_data["100Big"]["nowVote"] }}({{ big_data["100Big"]["endVote"] }})</span>
+                                </h4>
                                 <div class="progress mb-4">
                                     <div class="progress-bar" role="progressbar"
                                          style="width: {{ big_data["100Big"]["nowVoteFloat"] / max_vote * 100 }}%; background-color: #ec842a;"
@@ -173,7 +176,8 @@
                             </div>
                             <div class="col-lg-11 col-10 px-1">
                                 <h4 class="small font-weight-bold">　<span
-                                        class="float-right">{{ big_data["big1000"]["nowVote"] }}({{ big_data["big1000"]["endVote"] }})</span></h4>
+                                        class="float-right">{{ big_data["big1000"]["nowVote"] }}({{ big_data["big1000"]["endVote"] }})</span>
+                                </h4>
                                 <div class="progress mb-4">
                                     <div class="progress-bar" role="progressbar"
                                          style="width: {{ big_data["big1000"]["nowVoteFloat"] / max_vote * 100 }}%; background-color: #e670a2;"
@@ -188,7 +192,8 @@
                             </div>
                             <div class="col-lg-11 col-10 px-1">
                                 <h4 class="small font-weight-bold">　<span
-                                        class="float-right">{{ big_data["miniBig"]["nowVote"] }}({{ big_data["miniBig"]["endVote"] }})</span></h4>
+                                        class="float-right">{{ big_data["miniBig"]["nowVote"] }}({{ big_data["miniBig"]["endVote"] }})</span>
+                                </h4>
                                 <div class="progress">
                                     <div class="progress-bar" role="progressbar"
                                          style="width: {{ big_data["miniBig"]["nowVoteFloat"] / max_vote * 100 }}%; background-color: #abcb3b;"
@@ -377,7 +382,14 @@
             );
             */
         </script>
-
-
+    </div>
+    <div class="container">
+        <div class="row justify-content-center">
+            {% for ad in ad_list %}
+                <div class="col-md-4 text-center mb-4">
+                    {{ ad | safe }}
+                </div>
+            {% endfor %}
+        </div>
     </div>
 {% endblock %}
