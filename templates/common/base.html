@@ -36,6 +36,18 @@
             width: 100%; /* 幅を100%に */
             height: 25vh; /* 高さを画面の50%に */
         }
+        .container-fluid {
+            width: 50%; /* 画面幅の設定 */
+            margin: 0 auto; /* 中央揃え */
+            background-color: #f8f9fc; /* 必要に応じて背景色を指定（オプション） */
+        }
+        /* スマートフォン画面用（幅768px以下）では全幅に設定 */
+        @media (max-width: 768px) {
+            .container-fluid {
+                width: 100%; /* スマホのときは幅を100%にする */
+                margin: 0; /* 余白をなくす */
+            }
+        }
     </style>
     <title>{% block title %}{% endblock %}</title>
 
