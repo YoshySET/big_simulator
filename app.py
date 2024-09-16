@@ -75,13 +75,14 @@ def post_json_data():
             raise Exception("No JSON data provided")
     except Exception as e:
         print(e)
+        abort(500, description="read request json failed")
     
     try:
         with open(data_json_path, "r", encoding="utf-8") as json_file:
             all_big_data = json.load(json_file)  # JSONデータをロード
         
         # 一番頭のキーを取得
-        first_key = next(iter(all_big_data))
+        first_key = next(iter(request_json))
         all_big_data[first_key] = request_json[first_key]
         
         with open(data_json_path, 'w', encoding='utf-8') as json_file:
