@@ -78,8 +78,12 @@ def post_json_data():
         abort(500, description="read request json failed")
     
     try:
-        with open(data_json_path, "r", encoding="utf-8") as json_file:
-            all_big_data = json.load(json_file)  # JSONデータをロード
+        all_big_data = {}
+        try:
+            with open(data_json_path, "r", encoding="utf-8") as json_file:
+                all_big_data = json.load(json_file)  # JSONデータをロード
+        except Exception as e:
+            print("data.jsonを開けません", e)
         
         # 一番頭のキーを取得
         first_key = next(iter(request_json))
