@@ -9,17 +9,28 @@ app = Flask(__name__)
 VALID_API_KEY = os.getenv('VALID_API_KEY')
 data_json_path = "data.json"
 ad_list_json_path = "ad_list.json"
+is_localhost = "false"
+
+
+# context_processorを使ってテンプレート共通の変数を定義
+@app.context_processor
+def inject_common_variables():
+    return {
+        'is_localhost': os.getenv('isLocalhost')
+    }
 
 
 @app.route('/', methods=['GET'])
 def index():
+    # 本番環境起動の場合のみ広告データ読み込み
+    ad_list = []
+    if os.getenv('isLocalhost') != "true":
+        with open(ad_list_json_path, "r", encoding="utf-8") as json_file:
+            ad_list_data = json.load(json_file)
+        ad_list = random.sample(ad_list_data["adList"], 2)
+
     with open(data_json_path, "r", encoding="utf-8") as json_file:
         big_data = json.load(json_file)
-
-    with open(ad_list_json_path, "r", encoding="utf-8") as json_file:
-        ad_list_data = json.load(json_file)
-
-    ad_list = random.sample(ad_list_data["adList"], 2)
 
     max_vote = 0.00
     for name in ["big", "megaBIG", "100Big", "big1000", "miniBig"]:
@@ -65,4 +76,5 @@ def post_json_data():
 
 
 if __name__ == '__main__':
+    os.environ['isLocalhost'] = "true"
     app.run(debug=True)
