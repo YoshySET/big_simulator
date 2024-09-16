@@ -28,17 +28,28 @@ def index():
         with open(ad_list_json_path, "r", encoding="utf-8") as json_file:
             ad_list_data = json.load(json_file)
         ad_list = random.sample(ad_list_data["adList"], 2)
-
+    
+    # BIGくじデータ取得
     with open(data_json_path, "r", encoding="utf-8") as json_file:
-        big_data = json.load(json_file)
-
+        all_big_data = json.load(json_file)
+    
+    # キーを数値として比較して最大のキーを取得
+    max_key = max(all_big_data.keys(), key=lambda x: int(x))
+    big_data = all_big_data[str(max_key)]
+    
+    # プログレスバー用の最大投票口数を計算
     max_vote = 0.00
     for name in ["big", "megaBIG", "100Big", "big1000", "miniBig"]:
         now_vote = float(big_data[name]["nowVote"].replace(",", ""))
         big_data[name]["nowVoteFloat"] = now_vote
         max_vote = now_vote if max_vote < now_vote else max_vote
-
-    return render_template('index.html', big_data=big_data, max_vote=max_vote, ad_list=ad_list)
+    
+    history_list = [1234, 2345, 5676]
+    
+    return render_template(
+        'index.html',
+        big_data=big_data, max_vote=max_vote, ad_list=ad_list, history_list=history_list
+    )
 
 
 @app.route('/about', methods=['GET'])
@@ -56,7 +67,7 @@ def post_json_data():
     api_key = request.headers.get('x-api-key')
     if api_key != VALID_API_KEY:
         abort(401, description="Invalid API key")
-
+    
     json_dict = {}
     try:
         json_dict = request.get_json()
@@ -64,14 +75,14 @@ def post_json_data():
             raise Exception("No JSON data provided")
     except Exception as e:
         print(e)
-
+    
     try:
         with open(data_json_path, 'w') as json_file:
             json.dump(json_dict, json_file, indent=4)
     except Exception as e:
         print(e)
         abort(500, description="Failed to write JSON file")
-
+    
     return jsonify({"message": "JSON data successfully saved"})
 
 
