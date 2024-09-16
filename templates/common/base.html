@@ -1,87 +1,74 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    {% if is_localhost != "true" %}
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-BJZ4TMWBEL"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
+  {% if is_localhost != "true" %}
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BJZ4TMWBEL"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-            function gtag() {
-                dataLayer.push(arguments);
-            }
-
-            gtag('js', new Date());
-            gtag('config', 'G-BJZ4TMWBEL');
-        </script>
-        <script async
-                src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4342525703688154"
-                crossorigin="anonymous"></script>
-    {% endif %}
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <!-- Custom fonts for this template 5.15.3-->
-    <link href="{{ url_for('static', filename='vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet"
-          type="text/css">
-    <link
-            href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-            rel="stylesheet">
-    <!-- Custom styles for this template-->
-    <link href="{{ url_for('static', filename='css/sb-admin-2.min.css') }}" rel="stylesheet">
-    <!-- chartJS -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <style>
-        .chart-area {
-            position: relative;
-            width: 100%; /* 幅を100%に */
-            height: 25vh; /* 高さを画面の50%に */
+        function gtag() {
+            dataLayer.push(arguments);
         }
 
-        .container-fluid {
-            width: 60%; /* 画面幅の設定 */
-            margin: 0 auto; /* 中央揃え */
-            background-color: #f8f9fc; /* 必要に応じて背景色を指定（オプション） */
-        }
+        gtag('js', new Date());
+        gtag('config', 'G-BJZ4TMWBEL');
+    </script>
+    <script async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4342525703688154"
+            crossorigin="anonymous"></script>
+  {% endif %}
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <!-- Custom fonts for this template 5.15.3-->
+  <link href="{{ url_for('static', filename='vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet"
+        type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+  <!-- Custom styles for this template-->
+  <link href="{{ url_for('static', filename='css/sb-admin-2.min.css') }}" rel="stylesheet">
+  <!-- chartJS -->
+  <style>
+      .container-fluid {
+          width: 60%; /* 画面幅の設定 */
+          margin: 0 auto; /* 中央揃え */
+          background-color: #f8f9fc; /* 必要に応じて背景色を指定（オプション） */
+      }
 
-        /* スマートフォン画面用（幅768px以下）では全幅に設定 */
-        @media (max-width: 768px) {
-            .container-fluid {
-                width: 100%; /* スマホのときは幅を100%にする */
-                margin: 0; /* 余白をなくす */
-            }
-        }
-    </style>
-    <title>{% block title %}{% endblock %}</title>
+      /* スマートフォン画面用（幅768px以下）では全幅に設定 */
+      @media (max-width: 768px) {
+          .container-fluid {
+              width: 100%; /* スマホのときは幅を100%にする */
+              margin: 0; /* 余白をなくす */
+          }
+      }
+  </style>
+  <title>{% block title %}{% endblock %}</title>
 
-    <!-- 特定のページをnoindexにする -->
-    {% if request.path == url_for('privacy_policy') %}
-        <meta name="robots" content="noindex">
-    {% endif %}
+  <!-- 特定のページをnoindexにする -->
+  {% if request.path == url_for('privacy_policy') %}
+    <meta name="robots" content="noindex">
+  {% endif %}
 </head>
 
 <body id="page-top">
 <div id="wrapper">
 
-    {% include "common/sidebar.html" %}
+  {% include "common/sidebar.html" %}
 
-    <div id="content-wrapper" class="d-flex flex-column">
-        <div id="content">
-            {% include "common/topbar.html" %}
-            {% block content %}{% endblock %}
-        </div>
-
-        {% include "common/footer.html" %}
-
+  <div id="content-wrapper" class="d-flex flex-column">
+    <div id="content">
+      {% include "common/topbar.html" %}
+      {% block content %}{% endblock %}
     </div>
-</div>
 
-<!-- Scroll to Top Button-->
-<a class="scroll-to-top rounded" href="#page-top">
-    <i class="fas fa-angle-up"></i>
-</a>
+    {% include "common/footer.html" %}
+
+  </div>
+</div>
 
 <!-- Bootstrap core JavaScript-->
 <script src="{{ url_for('static', filename='vendor/jquery/jquery.min.js') }}"></script>
