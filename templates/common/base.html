@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BJZ4TMWBEL"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
+    {% if is_localhost != "true" %}
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-BJZ4TMWBEL"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
 
-        function gtag() {
-            dataLayer.push(arguments);
-        }
+            function gtag() {
+                dataLayer.push(arguments);
+            }
 
-        gtag('js', new Date());
-        gtag('config', 'G-BJZ4TMWBEL');
-    </script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4342525703688154"
-            crossorigin="anonymous"></script>
+            gtag('js', new Date());
+            gtag('config', 'G-BJZ4TMWBEL');
+        </script>
+        <script async
+                src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4342525703688154"
+                crossorigin="anonymous"></script>
+    {% endif %}
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -36,11 +39,13 @@
             width: 100%; /* 幅を100%に */
             height: 25vh; /* 高さを画面の50%に */
         }
+
         .container-fluid {
             width: 50%; /* 画面幅の設定 */
             margin: 0 auto; /* 中央揃え */
             background-color: #f8f9fc; /* 必要に応じて背景色を指定（オプション） */
         }
+
         /* スマートフォン画面用（幅768px以下）では全幅に設定 */
         @media (max-width: 768px) {
             .container-fluid {
