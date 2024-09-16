@@ -33,7 +33,7 @@ def index():
     with open(data_json_path, "r", encoding="utf-8") as json_file:
         all_big_data = json.load(json_file)
     
-    # キーを数値として比較して最大のキーを取得
+    # キーを数値として比較して直近開催データを取得
     max_key = max(all_big_data.keys(), key=lambda x: int(x))
     big_data = all_big_data[str(max_key)]
     
@@ -44,7 +44,7 @@ def index():
         big_data[name]["nowVoteFloat"] = now_vote
         max_vote = now_vote if max_vote < now_vote else max_vote
     
-    history_list = [1234, 2345, 5676]
+    history_list = [key for key in all_big_data.keys()]
     
     return render_template(
         'index.html',
@@ -68,17 +68,25 @@ def post_json_data():
     if api_key != VALID_API_KEY:
         abort(401, description="Invalid API key")
     
-    json_dict = {}
+    request_json = {}
     try:
-        json_dict = request.get_json()
-        if json_dict is None:
+        request_json = request.get_json()
+        if request_json is None:
             raise Exception("No JSON data provided")
     except Exception as e:
         print(e)
     
     try:
-        with open(data_json_path, 'w') as json_file:
-            json.dump(json_dict, json_file, indent=4)
+        with open(data_json_path, "r", encoding="utf-8") as json_file:
+            all_big_data = json.load(json_file)  # JSONデータをロード
+        
+        # 一番頭のキーを取得
+        first_key = next(iter(all_big_data))
+        all_big_data[first_key] = request_json[first_key]
+        
+        with open(data_json_path, 'w', encoding='utf-8') as json_file:
+            json.dump(all_big_data, json_file, ensure_ascii=False, indent=4)
+            
     except Exception as e:
         print(e)
         abort(500, description="Failed to write JSON file")
